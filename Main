@@ -1,0 +1,16 @@
+public class Main {
+    public static void main(String[] args) {
+        
+        System.out.println("--- 1. Testing Inheritance ---");
+        InheritedCar myInheritedCar = new InheritedCar();
+        // สามารถเรียกใช้ move() ได้เลยเพราะสืบทอดมาจาก Vehicle
+        myInheritedCar.move(); 
+        // เรียกใช้ method ของตัวเองได้ปกติ
+        myInheritedCar.honk(); 
+
+        System.out.println("\n--- 2. Testing Composition ---");
+        ComposedCar myComposedCar = new ComposedCar();
+        // ทำงานโดยไปเรียก start() ของ Engine ที่อยู่ข้างในอีกที
+        myComposedCar.startCar(); 
+    }
+}
